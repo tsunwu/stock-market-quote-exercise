@@ -1,0 +1,12 @@
+
+#stock-panel {
+    background-color: $light-gray;
+}
+
+
+@media (min-width: $tablet + 0.02px) {
+    #stock-panel {
+        width: 800px;
+        height: 400px;
+    }
+}
