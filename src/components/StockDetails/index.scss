@@ -1,0 +1,65 @@
+#stock-details {
+    position: absolute;
+    left: 329px;
+    top: 52px;
+    padding: 10px 30px;
+
+    .display-rows {
+        position: relative;
+        height: 60px;
+        padding-top: 10px;
+    }
+
+    .label {
+        color: $dark-gray;
+        font-weight: 400;
+    }
+
+    .data {
+        font-weight: 500;
+
+        &, .label {
+            width: 150px;
+        }
+    }
+
+    .up {
+        color: $green;
+    }
+
+    .down {
+        color: $red;
+    }
+
+    #comp-symbol {
+        font-size: 32px;
+        font-weight: 600;
+        color: $blue;
+    }
+
+    #comp-name {
+        margin-left: 60px;
+        font-size: 24px;
+    }
+
+    #prim-exchange {
+        width: 500px;
+    }
+
+    #lastest-price, #close, #high {
+        position: absolute;
+        left: 0;
+    }
+
+    #price-change, #open, #low {
+        position: absolute;
+        left: 150px;
+
+        &-percent {
+            position: absolute;
+            left: 300px;
+            width: 150px;
+        }
+    }
+
+}

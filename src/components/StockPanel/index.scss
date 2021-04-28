@@ -1,12 +1,33 @@
-
-#stock-panel {
-    background-color: $light-gray;
+#title {
+    height: 50px;
+    font-size: 32px;
+    color: $dark-gray;
+    padding-left: 30px;
+    border-bottom: 1px inset $light-gray;
 }
 
 
 @media (min-width: $tablet + 0.02px) {
     #stock-panel {
+        position: relative;
+        top: 100px;
+        left: 200px;
         width: 800px;
-        height: 400px;
+        height: 450px;
+    }
+
+    #stock-list {
+        height: 600px;
+        width: 326px;
+    }
+
+    #vl {
+        position: absolute;
+        top: 70px;
+        left: 323px;
+        height: 355px;
+        width: 5px;
+        padding-right: 5px;
+        border-right: 1px inset $light-gray;
     }
 }

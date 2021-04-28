@@ -1,0 +1,31 @@
+#stock-table {
+    overflow: auto;
+    height: 200px;
+    text-align: center;
+
+    th {
+        font-weight: 600;
+        text-align: center;
+    }
+
+    th, td {
+        border-bottom: 1px inset $light-gray;
+        padding: 10px 3px;
+    }
+
+    td:hover {
+        cursor: pointer;
+    }
+
+    .stock-symbol {
+        font-weight: 500;
+        color: $blue;
+        width: 60px;
+    }
+
+    .stock-name {
+        width: 250px;
+    }
+
+}
+
