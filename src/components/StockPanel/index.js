@@ -6,7 +6,7 @@ import StockTable from '../StockTable/index';
 import StockDetails from '../StockDetails';
 
 const StockPanel = () => {
-  const [quote, dispatch] = useReducer(reducer, initalState)
+  const [quote, dispatch] = useReducer(reducer, initalState);
   
   return (
     <div id='stock-panel'>
@@ -14,7 +14,7 @@ const StockPanel = () => {
       <MyContext.Provider value={{ quote, dispatch }}>
         <StockTable/>
         <div id="vl"></div> 
-        <StockDetails/>    
+        <StockDetails quote={quote.quote}/>    
       </MyContext.Provider>
     </div>
   );

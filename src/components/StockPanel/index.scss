@@ -6,28 +6,52 @@
     border-bottom: 1px inset $light-gray;
 }
 
+#stock-panel {
+    position: relative;
+}
+
+#vl {
+    position: absolute;
+}
+
 
 @media (min-width: $tablet + 0.02px) {
     #stock-panel {
-        position: relative;
         top: 100px;
-        left: 200px;
+        left: 10%;
         width: 800px;
-        height: 450px;
-    }
-
-    #stock-list {
-        height: 600px;
-        width: 326px;
     }
 
     #vl {
-        position: absolute;
         top: 70px;
         left: 323px;
         height: 355px;
         width: 5px;
         padding-right: 5px;
         border-right: 1px inset $light-gray;
+    }
+}
+
+@media (max-width: $tablet) {
+    #stock-panel {
+        top: 50px;
+        left: 10%;
+        width: 80%;
+    }
+
+    #vl {
+        width: 95%;
+        top: 252px;
+        left: 3%;
+        height: 5px;
+        padding-bottom: 5px;
+        border-bottom: 1px inset $light-gray;
+    }
+}
+
+@media (max-height: $phone-large) {
+    #stock-panel {
+        top: 10px;
+        left: 20px;
     }
 }

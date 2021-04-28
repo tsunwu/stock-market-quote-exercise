@@ -40,17 +40,19 @@ const StockTable = () => {
     });
 
     return (
-        <table id='stock-table'>
-            <thead>
-                <tr key='header' id='header-row'>
-                    <th key='symbol' id='symbol-header'>Symbol</th>
-                    <th key='name' id='name-header'>Name</th>
-                </tr>
-            </thead>
-            <tbody>
-                {tableRow}
-            </tbody>
-        </table>
+        <div id='table-wrapper'>
+            <table id='stock-table'>
+                <thead>
+                    <tr key='header' id='header-row'>
+                        <th key='symbol' id='symbol-header'>Symbol</th>
+                        <th key='name' id='name-header'>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {tableRow}
+                </tbody>
+            </table>
+        </div>
     )
 }
 

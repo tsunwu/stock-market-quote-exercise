@@ -26,6 +26,10 @@ export const stocks = [
     {
         symbol: 'nke',
         name: 'Nike Inc.'
+    },
+    {
+        symbol: 'wmt',
+        name: 'Walmart Inc.'
     }
 ]
 

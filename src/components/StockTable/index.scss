@@ -1,11 +1,14 @@
-#stock-table {
-    overflow: auto;
-    height: 200px;
+#table-wrapper {
+    position: relative;
+    overflow-y: auto;
     text-align: center;
 
     th {
         font-weight: 600;
         text-align: center;
+        position: sticky;
+        top: -1px;
+        background-color: $white;
     }
 
     th, td {
@@ -20,12 +23,36 @@
     .stock-symbol {
         font-weight: 500;
         color: $blue;
+    }
+
+}
+
+@media (min-width: $tablet + 0.02px) {
+    #table-wrapper {
+        height: 400px;
+        width: 322px;
+    }
+
+    .stock-symbol {
         width: 60px;
     }
 
     .stock-name {
         width: 250px;
     }
-
 }
 
+@media (max-width: $tablet) {
+    #table-wrapper {
+        height: 200px;
+        width: 100%;
+    }
+
+    #stock-table {
+        width: 100%;
+    }
+
+    th, td {
+        width: 50%;
+    }
+}

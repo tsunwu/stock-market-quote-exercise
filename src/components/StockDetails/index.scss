@@ -1,7 +1,5 @@
 #stock-details {
     position: absolute;
-    left: 329px;
-    top: 52px;
     padding: 10px 30px;
 
     .display-rows {
@@ -17,10 +15,6 @@
 
     .data {
         font-weight: 500;
-
-        &, .label {
-            width: 150px;
-        }
     }
 
     .up {
@@ -42,24 +36,86 @@
         font-size: 24px;
     }
 
+    #lastest-price, 
+    #close, 
+    #high,
+    #price-change,
+    #price-change-percent,
+    #open, 
+    #low {
+        position: absolute;
+    }
+}
+
+@media (min-width: $tablet + 0.02px) {
+    #stock-details {
+        left: 329px;
+        top: 52px;
+    }
+
+    .data, .label {
+        width: 150px;
+    }
+
     #prim-exchange {
         width: 500px;
     }
 
     #lastest-price, #close, #high {
-        position: absolute;
         left: 0;
     }
 
     #price-change, #open, #low {
-        position: absolute;
         left: 150px;
-
-        &-percent {
-            position: absolute;
-            left: 300px;
-            width: 150px;
-        }
     }
 
+    #price-change-percent {
+        left: 300px;
+    }
+}
+
+@media (max-width: $tablet) {
+    #stock-details {
+        top: 263px;
+    }
+
+    .data, .label {
+        width: 150px;
+    }
+
+    #prim-exchange {
+        width: 400px;
+    }
+
+    #lastest-price, #close, #high {
+        left: 0;
+    }
+
+    #price-change, #open, #low {
+        left: 150px;
+    }
+
+    #price-change-percent {
+        left: 300px;
+    }
+}
+
+@media (max-width: $phone-large) {
+    #stock-details {
+        padding: 10px 0;
+    }
+
+    .display-rows#price-row {
+        height: 100px;
+
+        #price-change {
+            left: 0;
+            top: 60px;
+        }
+
+        #price-change-percent {
+            left: 150px;
+            top: 60px;
+        }
+    }
 }
