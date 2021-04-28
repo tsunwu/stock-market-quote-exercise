@@ -12,9 +12,12 @@ const StockTable = () => {
         let id = e.target.parentNode.id;
         try {
             let quote = await StockAPI.getQuoteBySymbol(id);
-            dispatch({ type: 'UPDATE_QUOTE', quote: quote.data });
+            if(quote) {
+                dispatch({ type: 'UPDATE_QUOTE', quote: quote.data });
+            }
+            
         } catch(error) {
-            console.log(error);
+            console.log(error.message);
         }
     }
     

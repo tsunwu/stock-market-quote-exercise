@@ -3,7 +3,7 @@
 import React from 'react';
 import { render, screen, cleanup } from '@testing-library/react';
 import StockPanel from './index.js';
-import { MyContext, initalState, reducer } from '../../js/reducer';
+import { initalState, reducer } from '../../js/reducer';
 import 'regenerator-runtime/runtime'
 import Enzyme from 'enzyme'
 import EnzymeAdapter from 'enzyme-adapter-react-16'
@@ -29,20 +29,20 @@ afterEach(cleanup);
 
 describe('<StockPanel />', () => {
     describe('when page is initialized', () => {
-        it('then shows title', () => {
+        it('shouldshows title', () => {
             render(<StockPanel />);
             expect(screen.getByText(/Stocks/i)).toBeTruthy();
         });
 
-        it('then shows table with items', () => {
+        it('should shows table with items', () => {
             const { container } = render(<StockPanel />);
             expect(container.querySelector('#aapl-sym')).toBeTruthy();
             expect(container.querySelector('#nke-sym')).toBeTruthy();
         })
 
-        it('then shows details', () => {
+        it('should not shows details', () => {
             const { container } = render(<StockPanel />);
-            expect(container.querySelector('#stock-details')).toBeTruthy();
+            expect(container.querySelector('#stock-details')).toBeFalsy();
         });
     });
 
@@ -55,6 +55,10 @@ describe('<StockPanel />', () => {
             expect(reducer(initalState, { type: 'UPDATE_QUOTE', quote: mockQuote })).toEqual({
                 quote: mockQuote
             });
+        });
+
+        it('should return inital state with incorrect action type', () => {
+            expect(reducer(initalState, { type: 'ADD_QUOTE', quote: mockQuote })).toEqual({ quote: null });
         })
     });
 });
